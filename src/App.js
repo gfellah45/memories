@@ -1,20 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { PhotoProvider } from "./context/index";
 import "./App.css";
-import Heading from "./components/heading/Heading";
-import Uploadfile from "./components/fileupload/Uploadfile";
-import Images from "./components/images/Images";
-import Modal from "./components/modal/Modal";
+import Landing from "./components/landing/Landing";
+import "./assets/main.css";
+
+import User from "./components/userdashboard/user/User";
 
 function App() {
-  const [imageurl, setImageurl] = useState(null);
   return (
-    <div className="App">
-      <Heading />
-      <Uploadfile />
-      <Images setImageurl={setImageurl} />
-      {imageurl && <Modal setImageurl={setImageurl} imageurl={imageurl} />}
-    </div>
+    <PhotoProvider>
+      <Router>
+        <Switch>
+          <Route path="/" exact component={Landing}></Route>
+
+          <Route path="/user" exact component={User}></Route>
+        </Switch>
+      </Router>
+    </PhotoProvider>
   );
 }
 

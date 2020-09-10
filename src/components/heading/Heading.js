@@ -3,9 +3,8 @@ import React from "react";
 function Heading() {
   return (
     <div>
-      <h1 className="main_heading">Photo store</h1>
-      <h2 className="main_heading-one">Your Pictures</h2>
-      <p className="intro">
+      <h2 className="main_heading-one text-blue-900 mt-12">Your Pictures</h2>
+      <p className="intro text-blue-900 font-bold">
         {" "}
         Store Your Images, Retrive Later, Free your Local Stroge, 100% on the
         Cloud

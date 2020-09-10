@@ -1,9 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,900;1,700&display=swap");
 .App {
-  width: 900px;
-  margin: 0 auto;
+  font-family: "Source Code Pro", monospace;
 }
 .main_heading {
-  color: blue;
+  color: teal;
 }
 .main_heading-one {
   text-align: center;
@@ -18,25 +19,25 @@
   text-align: center;
   color: teal;
 }
-label input {
+.round input {
   height: 0;
   width: 0;
   opacity: 0;
 }
-label {
+.round {
   display: block;
   width: 30px;
   height: 30px;
 
   border-radius: 50%;
-  margin: 10px auto;
-  line-height: 25px;
-  color: blue;
+  margin: 7px auto;
+  line-height: 18px;
+  color: red;
   font-weight: bold;
   font-size: 24px;
   border: 1px solid teal;
 }
-label:hover {
+.round:hover {
   background: var(--primary);
   color: teal;
 }
@@ -51,17 +52,17 @@ label:hover {
 .image_grid {
   margin: 20px auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 .image_wrap {
-  position: relative;
   overflow: hidden;
   height: 0;
   padding: 50% 0;
+  /* padding controls height, will always be perfectly square regardless of width */
+  position: relative;
   opacity: 0.8;
 }
-
 .image_wrap img {
   min-width: 100%;
   min-height: 100%;
@@ -70,6 +71,16 @@ label:hover {
   top: 0;
   left: 0;
 }
+
+.instimg {
+  transform: rotate(12deg);
+}
+.mm {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 3rem;
+}
+
 .modal_backdrop {
   position: fixed;
   top: 0;
