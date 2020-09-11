@@ -16,18 +16,11 @@ const firebaseConfig = {
   measurementId: "G-NH0K8464CL",
 };
 // Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
 const projectStorage = firebase.storage();
 const projectDatabase = firebase.firestore();
 const firebaseAuth = firebase.auth();
 const timeStamp = firebase.firestore.FieldValue.serverTimestamp;
 
-export {
-  projectDatabase,
-  projectStorage,
-  firebaseAuth,
-  timeStamp,
-  firebase,
-  app,
-};
+export { projectDatabase, projectStorage, firebaseAuth, timeStamp, firebase };

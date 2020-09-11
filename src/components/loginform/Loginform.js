@@ -2,10 +2,9 @@
 import React, { useState, useContext } from "react";
 import { photoContext } from "../../context/index";
 import { firebase, firebaseAuth } from "../../firebase/config";
-import { useHistory } from "react-router-dom";
+
 import { ToastContainer, toast, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import useInput from "../hooks/useInput";
 
 // componentes
 import Signup from "./Signup";
@@ -14,9 +13,7 @@ import Login from "./Login";
 
 function Loginform() {
   const [loginState, setLoginState] = useState("login");
-  const { currentUser, setCurrentUser, user, setUserInfo } = useContext(
-    photoContext
-  );
+  const { user, setUserInfo } = useContext(photoContext);
   console.log(user.email, user.password);
 
   const uiConfig = {
@@ -51,7 +48,7 @@ function Loginform() {
   const userDetails = (e) => {
     setUserInfo(e);
   };
-  const history = useHistory();
+
   // ccreting a user
   const onCreateNewUser = async () => {
     try {
@@ -76,23 +73,6 @@ function Loginform() {
       }
     }
   };
-  // React.useEffect(() => {
-  //   const unsbscribe = firebaseAuth.onAuthStateChanged(async (cred) => {
-  //     const newUser = {
-  //       status: true,
-  //       cred,
-  //     };
-  //     if (cred) {
-  //       localStorage.setItem(`${cred.email}`, JSON.stringify(newUser));
-
-  //       // let token = await cred.getIdToken();
-  //       // let idTokenResult = await cred.getIdTokenResult();
-  //       history.push("/user");
-  //     }
-  //   });
-
-  //   return () => unsbscribe();
-  // }, [history, setCurrentUser, currentUser]);
 
   return (
     <div className="w-11/12 mt-4 m-auto flex bg-gray-200  lg:w-9/12 lg:m-auto shadow-xl lg:mt-4 p-4">

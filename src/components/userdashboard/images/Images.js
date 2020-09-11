@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useDatabase } from "../../hooks/useDatabase";
 import { motion } from "framer-motion";
 import { projectStorage, projectDatabase } from "../../../firebase/config";

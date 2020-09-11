@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { firebaseAuth } from "../../../firebase/config";
+
 import Heading from "../../heading/Heading";
 import Uploadfile from "../fileupload/Uploadfile";
 import Images from "../images/Images";
