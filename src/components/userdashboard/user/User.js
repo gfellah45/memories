@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import Heading from "../../heading/Heading";
+import Heading from "../heading/Heading";
 import Uploadfile from "../fileupload/Uploadfile";
 import Images from "../images/Images";
 import Modal from "../modal/Modal";
